@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  background-color: #263238;
+}
+
+#span {
+  float: right;
+  background-color: red; 
+}
+
+#comments {
+  float: left;
+  background-color: red; 
+}
+
+#main {
+  text-align: center
+}
+
+#wordDeets {
+  font-size: 50px;
+  color: white;
+}

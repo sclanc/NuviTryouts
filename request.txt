@@ -1,0 +1,20 @@
+ // I actually didn't any packages to get the data in App.js, this code is just copied from there. 
+ // callback is a great candidate for an anonymous function.
+ 
+  httpreq(url, callback){
+    var xmlHttp = new XMLHttpRequest();
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+          var json = JSON.parse(xmlHttp.responseText);
+          callback(json);
+        } 
+      }
+    xmlHttp.open("GET", url, true);
+    xmlHttp.send(null);
+  }
+  
+  
+  // I also utilize local storage in app.js, but here is a simple cookie creation example.
+  
+  document.cookie = "SESSION=NUVI-12345"
+  
